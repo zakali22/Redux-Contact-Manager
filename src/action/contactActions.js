@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 export const getContacts = () => async dispatch => {
-	const res = await axios.get('http://jsonplaceholder.typicode.com/users');
+	const res = await axios.get('//jsonplaceholder.typicode.com/users');
 	console.log(res.data);
 	dispatch({
 		type: GET_CONTACTS,
@@ -12,7 +12,7 @@ export const getContacts = () => async dispatch => {
 }
 
 export const getContact = (id) => async dispatch => {
-	const res = await axios.get(`http://jsonplaceholder.typicode.com/users/${id}`);
+	const res = await axios.get(`//jsonplaceholder.typicode.com/users/${id}`);
 	console.log(res.data)
 	dispatch({
 		type: GET_CONTACT,
@@ -21,7 +21,7 @@ export const getContact = (id) => async dispatch => {
 }
 
 export const addContact = (contact) => async dispatch => {
-	const res = await axios.post('http://jsonplaceholder.typicode.com/users', contact);
+	const res = await axios.post('//jsonplaceholder.typicode.com/users', contact);
 	dispatch({
 		type: ADD_CONTACT,
 		payload: res.data
@@ -30,7 +30,7 @@ export const addContact = (contact) => async dispatch => {
 
 export const deleteContact = (id) => async dispatch => {
 	try {
-		await axios.delete(`http://jsonplaceholder.typicode.com/users/${id}`)
+		await axios.delete(`//jsonplaceholder.typicode.com/users/${id}`)
 		dispatch({
 			type: DELETE_CONTACT,
 			payload: id
@@ -44,7 +44,7 @@ export const deleteContact = (id) => async dispatch => {
 }
 
 export const editContact = (id, contact) => async dispatch => {
-	const res = await axios.put(`http://jsonplaceholder.typicode.com/users/${id}`, contact);
+	const res = await axios.put(`//jsonplaceholder.typicode.com/users/${id}`, contact);
 	dispatch({
 		type: EDIT_CONTACT,
 		payload: res.data
