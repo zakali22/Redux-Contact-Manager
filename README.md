@@ -1,0 +1,1 @@
+# A simple contact manager web app using React and Redux
